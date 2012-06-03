@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<!-- POM file generated with GWT webAppCreator -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.gwtbootstrap</groupId>
+	<artifactId>gwt-bootstrap-showcase</artifactId>
+	<version>2.0.3.0-SNAPSHOT</version>
+	<name>GWT-Bootstrap</name>
+	<inceptionYear>2012</inceptionYear>
+	<url>http://gwtbootstrap.github.com/</url>
+	<scm>
+		<url>scm:git:git@github.com:gwtbootstrap/gwtbootstrap.github.com.git</url>
+		<connection>scm:git:git@github.com:gwtbootstrap/gwtbootstrap.github.com.git</connection>
+		<developerConnection>scm:git:git@github.com:gwtbootstrap/gwtbootstrap.github.com.git</developerConnection>
+	</scm>
+	<properties>
+		<github.sites.plugin.version>0.7-SNAPSHOT</github.sites.plugin.version>
+	</properties>
+	<build>
+		<plugins>
+				<plugin>
+				<groupId>com.github.github</groupId>
+				<artifactId>site-maven-plugin</artifactId>
+				<version>${github.sites.plugin.version}</version>
+				<configuration>
+					<message>Building site for showcase</message>
+					<outputDirectory>./</outputDirectory>
+					<branch>refs/heads/master</branch>
+					<excludes><exclude>**/.git/**</exclude></excludes>
+					<server>github.com</server>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+	
